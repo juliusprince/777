@@ -1,144 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
-    <title>随机</title>
-  </head>
-  <body>
-    <h1></h1>
-    <p id="quote"></p>
-    <button onclick="copyQuote()">copy</button>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leemail</title>
+    <link rel="stylesheet" href="./style.CSS">
+</head>
 
-    <script>
-      // 名人名言数组
-      var quotes = [
-"Yeah, totally.",
-"I guess so.",
-"Whatever works.",
-"I'm not really sure.",
-"Kind of busy right now.",
-"Hmm, interesting.",
-"That's cool, I guess.",
-"I've heard worse.",
-"Can't complain.",
-"Maybe, who knows?",
-"Not a big deal.",
-"Sure, why not?",
-"I'll think about it.",
-"I suppose.",
-"I'm just going with the flow.",
-"It is what it is.",
-"Same old, same old.",
-"Yeah, that sounds fine.",
-"No biggie.",
-"I'll see what I can do.",
-"I've got things to do.",
-"Mhm, got it.",
-"I'm listening.",
-"Alright then.",
-"I'll get back to you.",
-"Let's see how it goes.",
-"Just taking it easy.",
-"Sounds good in theory.",
-"I'm not really into it.",
-"I'm not sure about that.",
-"Let me check on that.",
-"I'll keep that in mind.",
-"I might do that later.",
-"I'm not too concerned.",
-"I'll play it by ear.",
-"Could be better, could be worse.",
-"I'm not feeling strongly either way.",
-"That's one way to look at it.",
-"I'm not in the mood.",
-"I'll think about giving it a shot.",
-"Yeah, I've heard that before.",
-"I'm just being honest.",
-"I've got mixed feelings.",
-"I'll consider it.",
-"Maybe another time.",
-"Let's not dwell on it.",
-"I'll take your word for it.",
-"I'm not really up for it.",
-"I'll see if I have time.",
-"I don't have a strong opinion.",
-"I'm not overly excited.",
-"I'll see how I feel later.",
-"It's not at the top of my list.",
-"I'll think about making time for it.",
-"I'm not fully committed.",
-"Yeah, yeah, sure.",
-"I've got other things on my mind.",
-"I'll get around to it.",
-"I'm not really in the mood to discuss it.",
-"I'm just going through the motions.",
-"I'll get back to you on that.",
-"I'm not really paying attention.",
-"I've got my own thing going on.",
-"That's one way to see it.",
-"I'm not invested in this conversation.",
-"I'll consider it, but no promises.",
-"I'm not giving it much thought.",
-"I'll check it out later.",
-"I'm not too concerned about it.",
-"I'll let you know if I'm interested.",
-"I'm not fully on board with that.",
-"I'll see if it fits into my schedule.",
-"I'm not making any promises.",
-"I'll keep that in mind, I guess.",
-"I'm not really following.",
-"I'll give it some thought.",
-"I'm not actively participating.",
-"I'll see if I remember.",
-"I'm not fully engaged right now.",
-"I'll think about getting back to you.",
-"I'm not overly enthusiastic.",
-"I'll see if I'm up for it.",
-"I'm not overly impressed.",
-"I'll think about it later.",
-"I'm not in the mood to discuss it.",
-"I'll see if it's worth my time.",
-"I'm not fully committed to the idea.",
-"I'll think about considering it.",
-"I'm not fully convinced.",
-"I'll see if it catches my interest.",
-"I'm not really into that.",
-"I'll think about checking it out.",
-"I'm not overly optimistic.",
-"I'll see if it's worth looking into.",
-"I'm not overly thrilled.",
-"I'll think about it when I have time.",
-"I'm not overly interested.",
-"I'll see if it's worth my while.",
-"I'm not overly concerned.",
-"I'll think about it when I feel like it.",
-"good！",
-"lol",
-"wow",
-"magical",
-"Very lucky"
-      ];
+<body>
+    <div class="content">
+        <div class="login-content">
+            <a href="#" class="banner-box"></a>
+            <div class="login-box">
+                <h1>leemail</h1>
+                <input type="text" placeholder="Account">
+                <input type="password" placeholder="Password">
+                <button class="login-btn">login</button>
+            </div>
+        </div>
+    </div>
+</body>
 
-      // 随机抽取名言
-      var randomIndex = Math.floor(Math.random() * quotes.length);
-      var quote = quotes[randomIndex];
-
-      // 显示名言
-      document.getElementById("quote").innerHTML = quote;
-
-      // 复制名言到剪贴板
-      function copyQuote() {
-        var quoteElement = document.getElementById("quote");
-        var range = document.createRange();
-        range.selectNodeContents(quoteElement);
-        var selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        document.execCommand("copy");
-        alert("已复制！");
-      }
-    </script>
-  </body>
 </html>
-
-
